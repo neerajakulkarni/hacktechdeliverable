@@ -85,11 +85,11 @@ function App() {
 
 				<h2>Filter by Age</h2>
 				<select value={maxAge} onChange={(e) => setMaxAge(e.target.value)} className="filter-age">
-					<option value="all">All</option>
 					<option value="today">Today</option>
 					<option value="week">Last Week</option>
 					<option value="month">Last Month</option>
 					<option value="year">Last Year</option>
+					<option value="all">All Time</option>
 				</select>
 
 				<h2>Previous Quotes</h2>
@@ -97,7 +97,7 @@ function App() {
 					{quotes.map((quote, index) => (
 						<div key={index} className="quote-card">
 							<div className="quote-name">{quote.name}</div>
-							<div className="quote-text">{quote.message}</div>
+							<div className="quote-message">{quote.message}</div>
 							<div className="quote-date">{formatDate(quote.time)}</div>
 						</div>
 					))}
